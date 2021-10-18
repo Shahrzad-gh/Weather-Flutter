@@ -18,7 +18,6 @@ class Home extends StatelessWidget {
         ElevatedButton(
           onPressed: () {},
           child: const Text('click me'),
-          //color:Color.green[400],)
       ],),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
