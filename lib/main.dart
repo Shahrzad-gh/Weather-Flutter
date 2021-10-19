@@ -18,19 +18,20 @@ class Home extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.end,
         children: <Widget>[
           Row(
-            children: <Widget>[
-            Text('Hello'),
-            Text(' World')
-          ],),
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              Container(
+                padding: const EdgeInsets.all(30.0),
+                color: Colors.pink,
+                child: const Text('two')
+              ),
+            ],
+          ),
           Container(
             padding: const EdgeInsets.all(20.0),
             color: Colors.cyan,
             child: const Text('one')
-          ),
-          Container(
-            padding: const EdgeInsets.all(30.0),
-            color: Colors.pink,
-            child: const Text('two')
           ),
           Container(
             padding: const EdgeInsets.all(40.0),
