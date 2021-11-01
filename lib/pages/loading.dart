@@ -11,7 +11,7 @@ class Loading extends StatefulWidget {
 
 class _LoadingState extends State<Loading> {
   void setupWorldTime() async {
-    WorldTime instance = WorldTime(location: 'Berlin', flag: 'be.svg', url: 'Europe/Berlin');
+    WorldTime instance = WorldTime(location: 'Berlin', flag: 'berlin.png', url: 'Europe/Berlin');
 
     await instance.getTime();
     Navigator.pushReplacementNamed(context, '/home', arguments: {
@@ -32,7 +32,7 @@ class _LoadingState extends State<Loading> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.blue[900],
-      body: Center(
+      body: const Center(
         child: SpinKitRotatingCircle(
           color: Colors.white,
           size: 80.0,
