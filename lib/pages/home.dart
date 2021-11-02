@@ -13,7 +13,6 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     data = data!.isNotEmpty ?  data : ModalRoute.of(context)!.settings.arguments as Map?;
-    print(data);
 
     //set background
     String bgImage = data!['isDayTime'] ? 'day.png' : 'night.png';
@@ -24,7 +23,8 @@ class _HomeState extends State<Home> {
             child: Container(
           decoration: BoxDecoration(
               image: DecorationImage(
-                  image: AssetImage('assets/$bgImage'), fit: BoxFit.cover)),
+                  image: AssetImage('assets/$bgImage'), fit: BoxFit.cover)
+                  ),
           child: Padding(
             padding: const EdgeInsets.fromLTRB(0, 120.0, 0, 0),
             child: SafeArea(
