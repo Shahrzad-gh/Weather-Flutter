@@ -10,14 +10,14 @@ class ChooseLocation extends StatefulWidget {
 
 class _ChooseLocationState extends State<ChooseLocation> {
   List<WorldTime> locations = [
-    WorldTime(location: 'London', flag: 'uk.png', url: 'Euorope/London'),
-    WorldTime(location: 'Chicago', flag: 'us.png', url: 'America/London'),
-    WorldTime(location: 'Tehran', flag: 'ir.png', url: 'Middle/London'),
-    WorldTime(location: 'Seoul', flag: 'sko.png', url: 'Asia/London'),
-    WorldTime(location: 'Jakarta', flag: 'indo.png', url: 'Asi/London'),
-    WorldTime(location: 'Berlin', flag: 'gr.png', url: 'Euorope/London'),
-    WorldTime(location: 'Otawa', flag: 'ca.png', url: 'America/London'),
-    WorldTime(location: 'Peru', flag: 'pr.png', url: 'Euorope/London')
+    WorldTime(location: 'London', flag: 'uk.png', url: 'Europe/London'),
+    WorldTime(location: 'Chicago', flag: 'us.png', url: 'America/Chicago'),
+    WorldTime(location: 'Tehran', flag: 'ir.png', url: 'Asia/Tehran'),
+    WorldTime(location: 'Seoul', flag: 'sko.png', url: 'Asia/Seoul'),
+    WorldTime(location: 'Jakarta', flag: 'indo.png', url: 'Asia/Jakarta'),
+    WorldTime(location: 'Berlin', flag: 'gr.png', url: 'Europe/Berlin'),
+    WorldTime(location: 'Otawa', flag: 'ca.png', url: 'America/Toronto'),
+    WorldTime(location: 'Peru', flag: 'pr.png', url: 'America/Lima')
   ];
 
   void updateTime(index) async {
@@ -25,16 +25,15 @@ class _ChooseLocationState extends State<ChooseLocation> {
     await instance.getTime();
     // navigate to home screen
     Navigator.pop(context, {
-            'location': instance.location,
+      'location': instance.location,
       'flag': instance.flag,
       'time': instance.time,
-      'isDayTime' : instance.isDayTime
+      'isDayTime': instance.isDayTime
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    print('build function run');
 
     return Scaffold(
         backgroundColor: Colors.grey[200],
